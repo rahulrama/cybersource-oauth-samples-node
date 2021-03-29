@@ -1,8 +1,8 @@
-# Sample OAuth Application for CyberSource
+# Sample OAuth Application for Cybersource
 
-This repository provides a simple sample application demonstrating OAuth authentication to CyberSource.
+This repository provides a simple sample application demonstrating OAuth authentication to Cybersource.
 
-While you can see a running example of this sample code at https://cybsoauthsample.azurewebsites.net/, in order to run this sample yourself you will need to request a new CyberSource test partner application credential.  You can request a test partner account from mailto:developer@cybersource.com With that test account you will be able to log into our partner portal and create your test client application. You will provide a redirect URL so that it can be registered against your test application and you can generate your test client ID & shared secret.
+While you can see a running example of this sample code at https://cybsoauthsample.azurewebsites.net/, in order to run this sample yourself you will need to request a new Cybersource test partner application credential.  You can request a test partner account from mailto:developer@cybersource.com With that test account you will be able to log into our partner portal and create your test client application. You will provide a redirect URL so that it can be registered against your test application and you can generate your test client ID & shared secret.
   
 __NOTE: If you use our sample client certificates to quickly test your application you will need to request that your partner Common Name is set to www.paymentsdemo.com. See below for more details on Mutual Authentication.__
   
@@ -20,14 +20,14 @@ See our full documentation at https://developer.cybersource.com/api/developer-gu
 * NPM
 
 ## Who Should Use This Sample
-Software partners with a cloud-based SAAS application, such as an e-commerce application, invoicing application, any software which requires payments, can use this sample to connect their customers accounts to their CyberSource account.  Using OAuth you can remove all the manual steps required to guide your users through the generation, retrieval and input of API keys.  All your users need to do is validate their CyberSource account, approve the connection of your software with their CyberSource account and they're ready to go.
+Software partners with a cloud-based SAAS application, such as an e-commerce application, invoicing application, any software which requires payments, can use this sample to connect their customers accounts to their Cybersource account.  Using OAuth you can remove all the manual steps required to guide your users through the generation, retrieval and input of API keys.  All your users need to do is validate their Cybersource account, approve the connection of your software with their Cybersource account and they're ready to go.
 
 
 ## How To Use This Sample
 This sample is based on a very simple node application and effectively demonstrates 3 key steps which could easily be implemented from any web-based application:
 
-### Step 1. Redirect the user to validate their CyberSource account, with a "Connect to CyberSource" button.  
-In your application link to the CyberSource OAuth URL, including the required URL parameters.  
+### Step 1. Redirect the user to validate their Cybersource account, with a "Connect to Cybersource" button.  
+In your application link to the Cybersource OAuth URL, including the required URL parameters.  
 
 From our sample this is https://github.com/CyberSource/cybersource-oauth-samples-node/blob/master/views/index.ejs
 
@@ -35,20 +35,20 @@ From our sample this is https://github.com/CyberSource/cybersource-oauth-samples
 
 ### Merchant Authentication & Authorization. 
 
-The merchant will authenticate and the authorize your application to connect with their CyberSource account.
+The merchant will authenticate and the authorize your application to connect with their Cybersource account.
 
 ![OAuth Screenshots](screenshots/oauth-sample-authenticate.png "Screenshot showing the merchant interaction of the OAuth flow.")
 ![OAuth Screenshots](screenshots/oauth-sample-authorize.png "Screenshot showing the merchant interaction of the OAuth flow.")
 
 
 ### Step 2. Retrieve an access token. 
-Call the CyberSource /tokens endpoint with your credentials, plus the authorization code returned from Step 1.  
+Call the Cybersource /tokens endpoint with your credentials, plus the authorization code returned from Step 1.  
 
 From our sample this is https://github.com/CyberSource/cybersource-oauth-samples-node/blob/master/app.js /authorize  
 
 ![OAuth Screenshots](screenshots/oauth-sample-step2.png "Screenshot showing the OAuth access token.")
 
-### Step 3. Call any of the approved APIs on behalf of your user, with the CyberSource access token.  
+### Step 3. Call any of the approved APIs on behalf of your user, with the Cybersource access token.  
 
 From our sample this is https://github.com/CyberSource/cybersource-oauth-samples-node/blob/master/app.js /apicall
 
@@ -72,5 +72,5 @@ Request a certificate from a CA (Certification Authority), using the CSR file ge
 See examples here for node.js (app.js line 69 & 70).  Regardless of your client you will generally associate the certificate and private key with your HTTP Request object similar to this sample.
 
   
-## Becoming a CyberSource Partner
-Once you have successfully tried the sample application you can contact CyberSource to become a registered software partner and retrieve your partner credentials.
+## Becoming a Cybersource Partner
+Once you have successfully tried the sample application you can contact Cybersource to become a registered software partner and retrieve your partner credentials.
